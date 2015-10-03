@@ -10,7 +10,7 @@ char*  _table = new char[9];
 int    _player;
 
 const char PLAYER_CHAR[2] = { 'X', 'O' };
-const int _win[9][3] = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, { 2, 4, 6 }, { 0, 4, 8 } };
+const int WIN_IDX[9][3] = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, { 2, 4, 6 }, { 0, 4, 8 } };
 
 int main(int argc, char *argv[])
 {
@@ -48,7 +48,7 @@ void check_win()
 	{
 		for (int p = 0; p <= 1; p++)
 		{
-			int p1 = _win[i][0], p2 = _win[i][1], p3 = _win[i][2];
+			int p1 = WIN_IDX[i][0], p2 = WIN_IDX[i][1], p3 = WIN_IDX[i][2];
 
 			if (_table[p1] == PLAYER_CHAR[p] && _table[p2] == PLAYER_CHAR[p] && _table[p3] == PLAYER_CHAR[p])
 			{

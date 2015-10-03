@@ -68,7 +68,6 @@ void check_win()
 
 				if (toupper(ans) == 'S')
 				{
-					start();
 					main(0, 0);
 				}
 				else
